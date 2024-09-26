@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/3648fc3ee8.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+
+    <title>Classmate</title>
+
+    <style>
+      body
+      {
+       margin: 0;
+      }
+      .header 
+      {
+         padding: 35px;
+         background:#041422;
+         position: fixed; 
+         left: 0px;
+         top: 0px; 
+         right: 0px;
+         font-size: 16px;
+         line-height: 22px;
+         font-family: Nunito, sans-serif;
+         color: white;
+         text-align: center;
+      }
+      .headingofsecondpart
+      {
+       font-size: 20px;
+       line-height: 27px;
+       font-family: Nunito, sans-serif;
+       color: rgb(49, 48, 51);
+      }
+      .containersecondimgsandwrite1
+      {
+       display: flex;
+       width: 100%;
+       height: 80vh;
+      }
+      .textportion1,.imageportion1
+      {
+       flex: 1;
+       padding: 20px;
+      }
+      .imageportion1
+      {
+       width: 100%;
+       height: auto;
+       object-fit: cover;
+      }
+       .textportion1
+      {
+       font-size: 20px;
+       line-height: 27px;
+       font-family: Nunito, sans-serif;
+       color: rgb(49, 48, 51);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: left;
+      }
+      .containersecondimgsandwrite2
+      {
+       display: flex;
+       width: 100%;
+       height: 80vh;
+      }
+      .textportion2,.imageportion2
+      {
+       flex: 1;
+       padding: 20px;
+      }
+      .imageportion2
+      {
+       width: 100%;
+       height: auto;
+       object-fit: cover;
+      }
+      .textportion2
+      {
+       font-size: 20px;
+       line-height: 10px;
+       font-family: Nunito, sans-serif;
+       color: rgb(49, 48, 51);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+      }
+      .list
+      {
+        list-style: none;
+        line-height: 50px;
+      }
+      .list li
+      {
+      counter-increment: Increment+1;
+      }
+      .list li::before
+      {
+        content: counter(Increment);
+        border-radius: 99pX;
+        color:#747272 ;
+        background-color: #ECECEC;
+        padding : 6px;
+        margin-right: 18px;
+        margin-left: -45px;
+      }
+      .container3column
+      {
+       display: flex;
+      }
+      .column1,.column2,.column3
+      {
+       width: 100%;
+       height: 360px;
+       font-family: Nunito, sans-serif;
+       color: #4f4f4f;
+       text-align: center;
+      background-color: #f0f4fc;
+      justify-content: center;
+      
+      }
+      .column1
+      {
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        font-weight: 500;
+        font-family: Nunito, sans-serif;
+        font-size: 20px;
+      }
+      .column2
+      {
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        font-weight: 500;
+        font-family: Nunito, sans-serif;
+        font-size: 20px;
+      }
+      .column3
+      {
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        font-weight: 500;
+        font-family: Nunito, sans-serif;
+        font-size: 20px;
+      }
+      .up,.down
+      {
+        width: 100%;
+       height: 100px;
+       font-family: Nunito, sans-serif;
+       color: #4f4f4f;
+       background-color: #f0f4fc;
+       line-height: 10px;
+       padding-top: 5px;
+      }
+      .down
+      {
+        display: flex;
+      }
+      .button
+      {
+        padding-top: 30px;
+        margin-left: 250px;
+      }
+      .container3
+      {
+        display: flex;
+      }
+      .image3,.text3
+      {
+        width: 100%;
+        height: 550px;
+        font-family: Nunito, sans-serif;
+        justify-content: center; 
+        text-align: center;
+        align-items: center;
+      }
+      .text3
+      {
+        align-content: center;
+        font-family: Nunito, sans-serif;
+      }
+      .review
+      {
+        cursor: pointer;
+        font-family: Nunito, sans-serif;
+        color: #4f4f4f;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+      }
+      .reviewhead
+      {
+        line-height: 10px;
+        padding-top: 5px;
+      }
+      .reviewbody
+      {
+        width: 100%;
+        height: 250px;
+        font-size: 20px;
+        line-height: 27px;
+      }
+      .reviewstar
+      {
+        margin-top: -10px;
+        color: rgb(171, 171, 0);
+      }
+      .footer
+      {
+        display: flex;
+       background-color: #041422; 
+       font-family: Nunito, sans-serif;
+       font-weight: 400;
+       color: rgb(201, 197, 202);
+       font-size: 20px;
+       font-weight: 400;
+      }
+      .col1,.col2,.col3
+      {
+        width: 100%;
+        height: 580px;
+        background-color: #041422;
+        padding-top: 100px;
+        font-family: Nunito, sans-serif;
+      }
+      .col1
+      {
+        margin-left: 70px;
+      }
+      .col2
+      {
+        margin-left: -50px;
+      }
+      .col3
+      {
+        margin-left: -100px;
+      }
+      .copyright
+      {
+        margin-top: -10px;
+        margin-bottom: -10px;
+        font-size: 16px;
+        font-family: Nunito, sans-serif;
+        font-weight: 500;
+        color: rgb(28, 27, 31);
+        text-align: center;
+      }
+     </style>
+      
+</head>
+<body>
+      <div class="header">
+          <a href=""><img  src="https://www.classmateshop.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHome1.8c7f0c98.png&w=256&q=75" width="250" height="50" style="position: fixed; left: 50px; top: 10px;" ></a>
+          <a href="" style="color: white;"><p style="font-weight: 700;position: fixed;right: 500px;top: 10px;">Track Your Order</p></a>
+          <a href="" style="color: white;"><p style="font-weight: 700;position: fixed;right: 290px;top: 3px;border-style: solid;border-radius: 20px;padding: 5px;">Design Your Notebook</p></a>
+          <a href="" style="color: white;"><i class="fa-solid fa-bag-shopping" style="color: rgb(248, 246, 246) ;position: fixed;right: 250px;top: 26px;"></i></a>
+          <a href="" style="color: white;"><i class="fa-regular fa-user" style="color: #eaecf0;position: fixed;right: 200px;top: 26px;"></i></a>
+          <a href="" style="color: white;"><p style="position: absolute;right: 72px;top: 9px;">Login/Sign Up</p></a>
+      </div>
+       
+      <div class="firstmainimage">
+          <a href=""><img src="https://www.classmateshop.com/_next/image?url=https%3A%2F%2Fcls-cdn-wip.sgp1.cdn.digitaloceanspaces.com%2Flive%2Fmedia%2Fbanner%2Fdesktop%2F86f6ab84-ad02-4ffa-8187-53f752f9a2ec.jpg&w=1920&q=75"
+          style="width: 90%;height: 85%;border-radius: 20px;margin-top: 100px;margin-left:70px;"></a>
+      </div>
+
+      <div class="headingofsecondpart">
+         <br><br><br>
+         <p style="text-align: center;font-weight: 0;font-family: Nunito, sans-serif;font-weight: 400;">Relive Your Special Moments </p>
+         <h2 style="text-align: center;font-family: Nunito, sans-serif;font-weight: 700;">With  Personalized  Notebooks</h2><br>
+      </div>
+          
+      <div class="containersecondimgsandwrite1">
+                  
+         <div class="imageportion1">
+              <img src="image2.jpg" style="margin-left: 45px;">
+              <br><br>
+         </div>
+
+         <div class="textportion1">
+             <h4 style="font-family: Nunito, sans-serif;position: static;color: rgb(49, 48, 51);font-weight: 700;">Hold on to all your picture-perfect moments with our customized <br>notebooks in just 4 simple steps.</h4>
+             <ol class="list">
+                 <li style="font-weight: 400;color: #4f4f4f;font-size: 20px;">Select notebook specs</li>
+                 <li style="font-weight: 400;color: #4f4f4f;font-size: 20px;">Upload the images for notebook covers</li>
+                 <li style="font-weight: 400;color: #4f4f4f;font-size: 20px;">You can add a video to your notebook if you wish to</li>
+                 <li style="font-weight: 400;color: #4f4f4f;font-size: 20px;">Pay for your order and upload the video from your profile section </li>
+             </ol><br><br>
+             <button style="color: white;background-color: rgb(6, 6, 115);border-radius: 50px;margin-right: 530px;font-size: medium;font-weight: bold;padding: 15px;border: 0;"><a href="" style="color: white;text-decoration-color: transparent;">Design Now</a></button>
+         </div>
+
+      </div>
+
+      <div class="containersecondimgsandwrite2">
+           
+            <div class="imageportion2">
+               <br><br>
+               <video style="margin-left: 190px;" muted loop autoplay><source src="video1.mp4"></video>
+            </div>
+          
+            <div class="textportion2">
+               <p style="font-weight: 400;color: #4f4f4f;font-family: Nunito, sans-serif;margin-left: 120px;">Capture Your Stories With</p>
+               <h1 style="font-family: Nunito, sans-serif;font-size: 32px;color: #4f4f4f;">Personalised Video Notebooks</h1>
+            </div>
+
+      </div>
+     
+      <div class="up">
+         <a href="" style="color: #4f4f4f;text-decoration-color: transparent;"><p style="font-size: 20px;font-weight: 400; text-align: center;">Choose From Our</p>
+         <h3 style="font-size: 32px;font-weight: 700; text-align: center;">Exciting Cover Designs</h3></a>
+      </div>
+
+      <div class="container3column">
+
+
+        <div class="column1">
+           <a href="" style="color: #4f4f4f;text-decoration-color: transparent;"><p>Millennial Lingo</p>
+           <img src="https://www.classmateshop.com/_next/image?url=https%3A%2F%2Fcls-cdn-wip.sgp1.cdn.digitaloceanspaces.com%2Flive%2Fmedia%2Fdesign_template%2Ffeatured_image%2F3a9e5449-1a06-426d-aa33-82eded31a3f0.png&w=256&q=75" style="width: 200px;height: 250px;"></a>
+        </div>
+
+
+        <div class="column2">
+           <a href="" style="color: #4f4f4f;text-decoration-color: transparent;"><p>Motivational Quotes</p>
+           <img src="https://www.classmateshop.com/_next/image?url=https%3A%2F%2Fcls-cdn-wip.sgp1.cdn.digitaloceanspaces.com%2Flive%2Fmedia%2Fdesign_template%2Ffeatured_image%2Fb2777374-ad22-4eb4-b70d-3b1e5f80a574.png&w=256&q=75" style="width: 250px;height: 300px;" ></a>
+        </div>
+
+
+        <div class="column3">
+           <a href="" style="color: #4f4f4f;text-decoration-color: transparent;"><p>Christmas</p>
+           <img src="https://www.classmateshop.com/_next/image?url=https%3A%2F%2Fcls-cdn-wip.sgp1.cdn.digitaloceanspaces.com%2Flive%2Fmedia%2Fdesign_template%2Ffeatured_image%2Fac71dcd7-4c09-4ef5-8ea0-9ad367fae281.png&w=256&q=75" style="width: 200px;height: 250px;"></a>
+        </div>
+
+
+      </div>
+
+      <div class="down">
+
+         <img src="https://www.classmateshop.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner_icon_2.21bc5d53.png&w=128&q=75" style="align-items: flex-start;margin-top: 25px;margin-left: 200px;">
+       
+         <div class="button">
+             <button style="background-color: black;padding: 10px;border-radius: 50%;border: 0;"><i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
+             <button style="color: white;background-color: rgb(6, 6, 115);border-radius: 50px;font-size: medium;font-weight: bold;padding: 16px;text-align: center;width: 150px;border: 0;margin-left: 75px;"><a href="" style="color: white;text-decoration-color: transparent;">Explore</a></button>
+             <button style="margin-left: 75px ;background-color: black;padding: 10px;border-radius: 50%;border: 0;"><i class="fa-solid fa-arrow-right" style="color: white;"></i></button>
+         </div>
+
+      </div>
+
+      <div class="container3">
+
+          <div class="image3">
+               <img src="https://www.classmateshop.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FNotordinary.9e6f1caf.png&w=640&q=75" width="80%" height="80%" style="margin-top: 60px;">
+          </div>
+
+          <div class="text3">
+              <h3 style="font-size: 32px;font-weight: 700;line-height: 30px;color: rgb(49, 48, 51);">Classmate Specials</h3>
+               <p style="font-size: 20px;font-weight: 400;line-height: 27px; color: rgb(49, 48, 51);">Be part of the art that impacts lives.<br>Make an impact in the lives of differently abled people by contributing to<br>NGOs that support their welfare.</p>
+               <button style="color: white;background-color: rgb(6, 6, 115);border-radius: 50px;font-size: medium;font-weight: bold;padding: 16px;border: 0;width: 300px;" ><a href="" style="color: white;text-decoration-color: transparent;">Explore Notebooks</a></button>
+          </div>
+
+      </div>
+
+      <div class="review">
+
+         <div class="reviewhead">
+             <p style="font-size: 20px;font-weight: 400; text-align: center;">Overwhelming Words</p>
+             <h3 style="font-size: 32px;font-weight: 700; text-align: center;">From Our Customers</h3>
+         </div>
+
+         <div class="reviewbody">
+             <img src="https://www.classmateshop.com/_next/image?url=https%3A%2F%2Fcdn.classmateshop.co.in%2Flive%2FNxtAssets%2FCarousel%2Freview%2Fimage3.webp&w=64&q=75" style="border-radius: 50px;">
+             <p style="font-weight: 400;color: rgb(96, 93, 98);margin-top: -5px;">Loved the look of my new notebooks! The customization process<br>was so easy and I would highly recommend your website to<br>anyone who likes to design their notebooks.</p>
+             <p style="font-weight: 600;color: rgb(49, 48, 51);margin-top: -5px;">Vignesh</p>
+
+             <div class="reviewstar">
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+             </div>
+         </div>
+
+      </div>
+
+      <div class="footer">
+
+         <div class="col1">
+           <p style="font-size: 20px;color: rgb(255, 255, 255);font-weight: 700;">My Account</p>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >My Order</p></a>
+           <p style="margin-top: 50px;font-size: 20px;color: rgb(255, 255, 255);font-weight: 700;">Site Link</p>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >ITC Estore</p></a>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >ITC Portal</p></a>
+           <a href=""><img src="https://www.classmateshop.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHome1.8c7f0c98.png&w=256&q=75" style="margin-top: 50px;"></a><br>
+           <a href=""><img src="https://www.classmateshop.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FITClogo.3f86b758.png&w=64&q=75" ></a>
+         </div>
+
+         <div class="col2">
+           <p style="font-size: 20px;color: rgb(255, 255, 255);font-weight: 700;">Miscellaneous</p>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >Terms & Conditions</p></a>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >Privacy Policy</p></a>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >Return Policy</p></a>
+           <a href="" style="color: rgb(201, 197, 202);text-decoration-color: transparent;"><p >Download Catalogue</p></a>
+           <p style="font-size: 20px;color: rgb(255, 255, 255);font-weight: 700;margin-top: 50px;">Follow Us On</p>
+           <p>Classmate</p>
+           <div class="logos">
+               <a href=""><img style="margin-right: 20px;"src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png" width="35px" height="35px"></a>
+               <a href=""><img style="margin-right: 20px;"src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-64.png" width="35px" height="35px"></a>
+               <a href=""><img style="margin-right: 20px;"src="twitter.png" width="35px" height="35px"></a>
+               <a href=""><img style="margin-right: 20px;"src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_youtube-64.png" width="35px" height="35px"></a>
+           </div>
+         </div>
+
+         <div class="col3">
+             <p style="font-size: 20px;color: rgb(255, 255, 255);font-weight: 700;">Contact Us</p>
+             <i class="fa-solid fa-phone" style="color: #c9c5ca;"></i><a href="" style="color: #376abf;text-decoration-color: transparent;"> 18004253242</a><br><br>
+             <i class="fa-solid fa-envelope" style="color: #c9c5ca;"></i><a href="" style="color: #376abf;text-decoration-color: transparent;"> care@classmateshop.com</a>
+             <p style="line-height: 28px;">Toll-free number<br>(Mon to Fri from 9:30 am To 5:30 pm)</p>
+             <p style="margin-top: 100px;">Classmate Pulse</p>
+             <div class="logos2">
+                 <a href=""><img style="margin-right: 20px;"src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png" width="35px" height="35px"></a>
+                 <a href=""><img style="margin-right: 20px;"src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-64.png" width="35px" height="35px"></a>
+             </div>
+             <p style="margin-top: 30px;">Paperkraft</p>
+             <div class="logos3">
+                 <a href=""><img style="margin-right: 20px;"src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png" width="35px" height="35px"></a>
+                 <a href=""><img style="margin-right: 20px;"src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-64.png" width="35px" height="35px"></a>
+             </div>
+          </div>
+
+      </div>
+
+      <div class="copyright">
+         <p>Copyright © 2024 ITC Ltd. All rights reserved.</p>
+      </div>
+
+</body>
+</html>
